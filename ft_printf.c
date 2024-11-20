@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mhakimi- <mhakimi-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mhakimi- <mhakimi-@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 21:54:55 by mhakimi-          #+#    #+#             */
-/*   Updated: 2024/11/18 19:55:43 by mhakimi-         ###   ########.fr       */
+/*   Updated: 2024/11/20 08:36:37 by mhakimi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ static void	ft_parse_flags(const char **str, t_flags *flags)
 	flags->space = 0;
 	while (**str == '+'
 		|| **str == ' '
-		|| **str == '#'
-		|| **str == '-'
-		|| **str == '0')
+		|| **str == '#')
 	{
 		if (**str == '+')
 			flags->plus = 1;
