@@ -1,6 +1,18 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mhakimi- <mhakimi-@student.42kl.edu.my>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/11/20 11:20:15 by mhakimi-          #+#    #+#              #
+#    Updated: 2024/11/20 12:23:52 by mhakimi-         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
-Files = ft_atoi \
+FILES = ft_atoi \
 	ft_bzero \
 	ft_calloc \
 	ft_isalnum \
@@ -35,7 +47,7 @@ Files = ft_atoi \
 	ft_tolower \
 	ft_toupper
 
-Bonus_Files = ft_lstnew \
+BONUS_FILES = ft_lstnew \
 	ft_lstadd_front \
 	ft_lstadd_back \
 	ft_lstdelone \
@@ -45,33 +57,39 @@ Bonus_Files = ft_lstnew \
 	ft_lstmap \
 	ft_lstsize
 
-Compiler = cc
-Compiler_Flags = -Wall -Wextra -Werror
+COMPILER = cc
+COMPILER_FLAGS = -Wall -Wextra -Werror
 
-C_Files	= $(Files:%=%.c)
-O_Files	= $(Files:%=%.o)
-Bonus_C_Files = $(Bonus_Files:%=%.c)
-Bonus_O_Files = $(Bonus_Files:%=%.o)
+C_FILES	= $(FILES:%=%.c)
+O_FILES	= $(FILES:%=%.o)
+BONUS_C_FILES = $(BONUS_FILES:%=%.c)
+BONUS_O_FILES = $(BONUS_FILES:%=%.o)
 
 %.o: %.c
-	$(Compiler) $(Compiler_Flags) -c $< -o $@
+	$(COMPILER) $(COMPILER_FLAGS) -c $< -o $@
 
-$(NAME): $(O_Files)
-	ar -rc $(NAME) $(O_Files)
+$(NAME): $(O_FILES)
+	ar -rc $(NAME) $(O_FILES)
 	ranlib $(NAME)
 
 all: $(NAME)
 
-bonus: $(NAME) $(Bonus_O_Files)
-	ar -rc $(NAME) $(O_Files) $(Bonus_O_Files)
+bonus: $(NAME) $(BONUS_O_FILES)
+	ar -rc $(NAME) $(O_FILES) $(BONUS_O_FILES)
 	ranlib $(NAME)
 
 clean:
-	rm -f $(O_Files) $(Bonus_O_Files)
+	rm -f $(O_FILES) $(BONUS_O_FILES)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+# so:
+# 	$(COMPILER) -nostartfiles -fPIC $(COMPILER_FLAGS) $(C_FILES) -o libft.o
+# 	cc -nostartfiles -shared -o libft.so $(O_FILES)
+# soclean: fclean
+# 	rm -f libft.o libft.so
 
 .PHONY: all clean fclean re bonus
