@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mhakimi- <mhakimi-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mhakimi- <mhakimi-@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 22:04:27 by mhakimi-          #+#    #+#             */
-/*   Updated: 2024/11/18 19:55:51 by mhakimi-         ###   ########.fr       */
+/*   Updated: 2024/11/20 10:49:09 by mhakimi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_flags
 	int	hash;
 }	t_flags;
 
+int		ft_printf(const char *str, ...);
 void	ft_putchar(char c, int *len);
 void	ft_putnbr(int n, int *len, t_flags *flags);
 void	ft_putnbr_unsigned(unsigned int n, int *len);
