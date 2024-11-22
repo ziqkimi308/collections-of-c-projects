@@ -6,7 +6,7 @@
 /*   By: mhakimi- <mhakimi-@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 21:54:55 by mhakimi-          #+#    #+#             */
-/*   Updated: 2024/11/20 08:36:37 by mhakimi-         ###   ########.fr       */
+/*   Updated: 2024/11/22 20:20:21 by mhakimi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ static void	ft_parse_flags(const char **str, t_flags *flags)
 	flags->plus = 0;
 	flags->hash = 0;
 	flags->space = 0;
-	while (**str == '+'
-		|| **str == ' '
-		|| **str == '#')
+	while (**str == '+' || **str == ' ' || **str == '#')
 	{
 		if (**str == '+')
 			flags->plus = 1;
