@@ -6,7 +6,7 @@
 /*   By: mhakimi- <mhakimi-@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 21:54:55 by mhakimi-          #+#    #+#             */
-/*   Updated: 2024/11/22 20:20:21 by mhakimi-         ###   ########.fr       */
+/*   Updated: 2024/11/22 20:49:43 by mhakimi-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,7 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (len);
 }
-
 /********** DON"T CHANGE CODE ABOVE THIS ******************/
-
 /*
 #include <stdio.h>
 #include <stdlib.h>
@@ -113,10 +111,12 @@ int main()
     ft_printf("Your ft_printf Output: |Negative number: %d|\n\n", -12345);
 
     printf("Expected Output: |Large number: 2147483647|\n");
-    ft_printf("Your ft_printf Output: |Large number: %d|\n\n", 2147483647); // INT_MAX
+    ft_printf("Your ft_printf Output: |Large number: %d|\n\n",
+    2147483647); // INT_MAX
 
     printf("Expected Output: |Small number: -2147483648|\n");
-    ft_printf("Your ft_printf Output: |Small number: %d|\n\n", -2147483648); // INT_MIN
+    ft_printf("Your ft_printf Output: |Small number: %d|\n\n",
+    -2147483648); // INT_MIN
 
     // Hexadecimal with uppercase
     printf("Expected Output: |Hex (uppercase): FF|\n");
@@ -141,10 +141,12 @@ int main()
 
     // Multiple types in one format string
     printf("Expected Output: |String: Hello, Number: 42, Hex: ff, Char: A|\n");
-    ft_printf("Your ft_printf Output: |String: %s, Number: %d, Hex: %x, Char: %c|\n\n", "Hello", 42, 255, 'A');
+    ft_printf("Your ft_printf Output: |String: %s, Number: %d, Hex: %x, Char: 
+    %c|\n\n", "Hello", 42, 255, 'A');
 
     printf("Expected Output: |Mix: 42 Hello -42 (null) ff A 0xff 4294967295|\n");
-    ft_printf("Your ft_printf Output: |Mix: %d %s %d %s %x %c %#x %u|\n\n", 42, "Hello", -42, NULL, 255, 'A', 255, 4294967295u);
+    ft_printf("Your ft_printf Output: |Mix: %d %s %d %s %x %c %#x %u|\n\n", 42,
+    "Hello", -42, NULL, 255, 'A', 255, 4294967295u);
 
     return 0;
 }
