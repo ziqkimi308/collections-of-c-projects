@@ -1,3 +1,4 @@
+## libft
 `libft` is the first project in the first milestone (milestone 0) in 42 Core curriculum. 
 
 The `libft` library includes a set of functions from the libc:
