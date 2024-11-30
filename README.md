@@ -1,4 +1,4 @@
-## libft
+# libft
 `libft` is the first project in the first milestone (milestone 0) in 42 Core curriculum. 
 
 The `libft` library includes a set of functions from the libc:
@@ -36,7 +36,7 @@ The `libft` library includes a set of functions from the libc:
 - `ft_putendl_fd`
 - `ft_putnbr_fd` 
 
-
+### Bonus Part
  The bonus of part of libft introduces the linked list functions:
  
 - `ft_lstadd_back`
