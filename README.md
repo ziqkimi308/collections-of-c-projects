@@ -1,6 +1,8 @@
 # libft
+
 `libft` is the first project in the first milestone (milestone 0) in 42 Core curriculum. 
 
+---
 The `libft` library includes a set of functions from the libc:
 - `isalpha`
 - `isdigit`
@@ -21,8 +23,8 @@ The `libft` library includes a set of functions from the libc:
 - `calloc`
 - `strdup`
 
-
- It also includes a set of functions that are either not in the libc, or that are part of it but in a different form:
+---
+It also includes a set of functions that are either not in the libc, or that are part of it but in a different form:
  
 - `ft_substr`
 - `ft_strjoin`
@@ -36,6 +38,7 @@ The `libft` library includes a set of functions from the libc:
 - `ft_putendl_fd`
 - `ft_putnbr_fd` 
 
+---
 ### Bonus Part
  The bonus of part of libft introduces the linked list functions:
  
@@ -49,7 +52,7 @@ The `libft` library includes a set of functions from the libc:
 - `ft_lstlast`
 - `ft_lstnew`
 
-
+---
  This library consists of:
  
 - Set of functions.c
